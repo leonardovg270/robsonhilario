@@ -174,3 +174,94 @@ h5 {
     margin-right: -10px;
     padding-top: 100px;
 }
+
+@media (max-width: 768px) { 
+    header img {
+        width: 60px;
+        height: 60px;
+        margin-left: 50px;
+        margin-top: 10px;
+    }
+
+    .botoes {
+        margin-top: 30px;
+        margin-right: 50px;
+    }
+    
+    .botoes a {
+        display: none;
+    }
+
+    #orcamento {
+        display: block;
+        color: white;
+        background-color: black;
+        padding: 8px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 50px;
+        margin-top: -10px;
+        width: 90px;
+        font-size: 15px;
+    }
+    .inicio {
+        display: flex;
+        font-family: "Open Sans", sans-serif;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        margin-left: 0px;
+        padding-top: 0px;
+        padding-right: 0px;
+        position: static;
+        margin-top: 0px;
+        z-index: -1;
+        flex-direction: column-reverse;
+    } 
+    
+    .texto {
+        margin-left: 0px;
+        margin-top: -70px;
+        z-index: 1;
+    }
+
+    .texto h1 {
+        margin-left: 10px;
+        font-size: 60px;
+        line-height:55px;
+    }
+
+    .texto h1 span {
+        text-shadow: 1px -20px 50px rgb(255, 255, 255);
+    }
+    
+    .texto h4 {
+        font-family: "Inter", sans-serif;
+        color: white;
+        background-color: black;
+        margin-left: 14px;
+        font-weight: 200;
+        padding-left: 4px;
+        width: 125px;
+        margin-top: -45px;
+        font-size: 20px;
+    }
+    
+    h5 {
+        font-family: "Open Sans", sans-serif;
+    }
+    
+    #frase {
+        margin-left:55px;
+        margin-top: 10px;
+    }    
+    
+    .inicio img {
+        filter: grayscale(100%) brightness(130%);
+        width: 300px;
+        margin-top: 0px;
+        margin-left: 0px;
+        height: 300px;
+        object-fit: cover;
+    }
+} 
