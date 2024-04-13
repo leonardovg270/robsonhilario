@@ -142,13 +142,14 @@ h5 {
 }
 
 .sobreBox p {
+    font-family: "Inter", sans-serif;
     text-align: justify;
 }
 
 .ensaios {
-    font-family: "Inter", sans-serif;
     margin-top: -30px;
     margin-right: -10px;
+    font-family: "Inter", sans-serif;
 }
 
 .fotosEnsaios {
@@ -201,6 +202,7 @@ h5 {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    font-family: "Inter", sans-serif;
 }
 
   /* Card */
@@ -251,65 +253,12 @@ h5 {
 	margin: 0 auto;
   }
   
-  /* Card Footer */
-  .card-footer {
-	margin-top: 10px;
-	text-align: center;
-	background-color: #000;
-  }
-  
-  .card-footer a {
-	color: #fff;
-	display: block;
-	padding: 16px;
-	text-decoration: none;
-	font-family: sans-serif;
-	font-weight: 600;
-  }
-  
-  /* Cores Cards */
-  .card-1 .card-footer {
-	background-color: #000000;
-  }
-  
-  .card-1 .card-local {
-	color: #000000;
-  }
-  
-  .card-2 .card-footer {
-	background-color: #000000;
-  }
-  
-  .card-2 .card-local {
-	color: #000000;
-  }
-  
-  .card-3 .card-footer {
-	background-color: #000000;
-  }
-  
-  .card-3 .card-local {
-	color: #000000;
-  }
   
   /* Animação Hover */
   .card:hover {
 	transform: scale3d(1.1, 1.1, 1);
   }
   
-
-header {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-}
 
 .container {
     max-width: 1200px;
@@ -318,61 +267,10 @@ body {
     margin-top: 50px;
 }
 
-.testimonial-card {
-    width: 30%; /* Define a largura dos cards */
-    display: inline-block; /* Alinha os cards lado a lado */
-    margin: 0 10px 20px; /* Adiciona um pequeno espaçamento entre os cards e abaixo */
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    position: relative; /* Para posicionar o conteúdo do card */
-}
-
-.testimonial-card::before {
-    content: "";
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.testimonial-card .testimonial-body {
-    padding: 10px;
-}
-
-.testimonial-card .testimonial-body p {
-    margin: 0;
-}
-
-.testimonial-card .testimonial-footer {
-    padding: 10px;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-top: 1px solid #ddd;
-    border-radius: 0 0 5px 5px;
-    text-align: center;
-}
-
-.testimonial-card .testimonial-footer img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-.testimonial-card .testimonial-footer h4 {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0;
+.container1 {
+    text-align: left;
+    margin-top: 50px;
+    margin-right: 150px;
 }
 
 .budget-wrapper {
@@ -399,10 +297,6 @@ body {
 .budget form {
     max-width: 400px; /* Define a largura máxima do formulário */
     margin: 0 auto; /* Centraliza o formulário na página */
-}
-
-.budget form fieldset {
-    border: none; /* Remove a borda do fieldset */
 }
 
 .budget form legend {
@@ -468,42 +362,35 @@ body {
     margin: 0; /* Remove margens padrão */
 }
 
-.submit-button i {
-    font-size: 50px; /* Define o tamanho fixo dos ícones */
-    position: absolute;
-    top: 200%;
-    transform: translateY(-50%);
-    color: #333; /* Define a cor dos ícones */
-}
-
-/* Ajusta a posição de cada ícone */
-.submit-button i:nth-child(1) {
-    right: 0;
-}
-
-.submit-button i:nth-child(2) {
-    right: 50px;
-}
-
-.submit-button i:nth-child(3) {
-    right: 100px;
-}
-
-.submit-button i:nth-child(4) {
-    right: 150px;
-}
-
-.submit-button i:nth-child(5) {
-    right: 200px;
-}
-
 footer  {
     text-align: center;
     margin-top: 100px;
+    font-family: "Inter", sans-serif;
+}
+
+footer h4 {
+    font-weight: 400;
 }
 
 
 @media (max-width: 768px) { 
+
+    #seta {
+        display: flex;
+        justify-content: end;
+    }
+    
+    #seta img{
+        width: 40px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 50px;
+        border: 1px solid #000;
+        position: fixed;
+        margin-top: 670px;
+        margin-right: 10px;
+        padding: 5px;
+    }
+
     header img {
         width: 60px;
         height: 60px;
@@ -542,7 +429,7 @@ footer  {
         padding-top: 0px;
         padding-right: 0px;
         position: static;
-        margin-top: 0px;
+        margin-top: 40px;
         z-index: -1;
         flex-direction: column-reverse;
     } 
@@ -595,7 +482,7 @@ footer  {
 
     .sobre {
         font-family: "Inter", sans-serif;
-        background-color: rgb(229, 229, 229);
+        background-color: fff;
         margin-top: 50px;
         margin-right: 0px;
     }
@@ -628,7 +515,7 @@ footer  {
     
     .ensaios {
         font-family: "Inter", sans-serif;
-        background-color: rgb(229, 229, 229);
+        background-color: fff;
         padding: 50px;
         margin-top: -10px;
         margin-right: -10px;
@@ -638,6 +525,7 @@ footer  {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
     }
     
     .box2 h1 {
@@ -648,14 +536,15 @@ footer  {
     }
     
     .fotosEnsaios img {
-        width: 80px;
-        height: 450px;
+        width: 350px;
+        height: 350px;
         object-fit: cover;
-        padding: 10px;
     }
     
     #familia {
-        height: 450px;
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
     }
     
     .ens1 h3 {
@@ -666,9 +555,208 @@ footer  {
     
     .eventos {
         font-family: "Inter", sans-serif;
-        background-color: rgb(229, 229, 229);
+        background-color: fff;
         margin-top: -20px;
         margin-right: -10px;
         padding-top: 100px;
+    }
+
+
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .relatos {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        font-family: "Inter", sans-serif;
+    }
+
+    .relatos h1 {
+        font-size: 20px;
+        margin-bottom: -20px;
+    }
+    
+      /* Card */
+      .card {
+        width: 300px;
+        height: 460px;
+        margin: 25px;
+        background-color: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+        transition: 0.3s;
+      }
+      
+      /* Card Header*/
+      .card-header {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      .card-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+      
+      /* Card Body */
+      .card-body {
+        height: 170px;
+        padding: 15px;
+        text-align: center;
+        font-family: sans-serif;
+      }
+      
+      .card-local {
+        font-size: 16px;
+        margin: 10px 0;
+      }
+      
+      
+      .card-texto {
+        font-size: 12px;
+        width: 250px;
+        margin: 0 auto;
+      }
+      
+      
+      /* Animação Hover */
+      .card:hover {
+        transform: scale3d(1.1, 1.1, 1);
+      }
+      
+    
+    .container {
+        max-width: 1200px;
+        margin: 30px auto;
+        text-align: center; /* Centralizando os cards */
+        margin-top: 50px;
+    }
+
+    .container1 {
+        text-align: left;
+        margin-top: 0px;
+        margin-right: 0px;
+    }
+
+    #orcamento1 {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .budget-wrapper {
+        font-family: "Inter", sans-serif;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    
+    .budget-wrapper h2 {
+        font-size: 18px;
+        font-weight: 400;
+        text-align: justify;
+    }
+    
+    .budget-info {
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .budget-info h2 {
+        text-align: center;
+
+    }
+    
+    .budget-info img {
+        width: 250px;
+        margin-top: 70%;
+        display: none;
+    }
+    
+    .budget form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .budget form legend {
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+    
+    .budget form .input-group {
+        margin-bottom: 15px; /* Adiciona espaçamento entre os campos */
+    }
+    
+    .container {
+        text-align: left;
+    }
+    
+    .budget form .input-group label {
+        display: block; /* Faz com que as labels ocupem toda a largura disponível */
+        margin-bottom: 5px; /* Adiciona espaçamento abaixo das labels */
+    }
+    
+    .budget form .input-group input,
+    .budget form .input-group select,
+    .budget form .input-group textarea {
+        width: 350px; /* Define a largura dos campos de entrada como 100% */
+        padding: 10px; /* Adiciona preenchimento interno aos campos */
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box; /* Faz com que o padding não aumente a largura do campo */
+    }
+    
+    .budget form button {
+        padding: 10px; /* Adiciona preenchimento ao botão */
+        background-color: #b1b1b1;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        width: 350px;
+    }
+    
+    .budget form button:hover {
+        background-color: #919191;
+    }
+    
+    .budget form textarea {
+        height: 100px; /* Define a altura do campo de texto */
+    }
+    
+    .budget-info {
+        display: flex;
+    }
+    
+    .budget-info h1 {
+        font-size: 50px; /* Tamanho do título */
+        margin-bottom: 10px; /* Adiciona espaço entre o título e o texto */
+    }
+    
+    .budget-info h3 {
+        font-size: 10px; /* Tamanho do texto descritivo */
+        margin: 0; /* Remove margens padrão */
+    }
+    
+    footer  {
+        text-align: center;
+        margin-top: 100px;
+        font-family: "Inter", sans-serif;
+        padding: 20px;
     }
 } 

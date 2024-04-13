@@ -1,3 +1,4 @@
+
 let anchorSelector = 'a[href^="#"]';
       
         // Collect all such anchor links
@@ -24,3 +25,4 @@ let anchorSelector = 'a[href^="#"]';
                 });
             }
         });
+

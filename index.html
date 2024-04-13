@@ -7,7 +7,7 @@
     <title>Robson Hilario Fotografo</title>
 
 </head>
-<body>
+<body onLoad="comeco();regular()">
     <a href="#inicio" id="seta">
         <img src="seta-removebg-preview.png" alt="seta">
     </a>
@@ -44,19 +44,20 @@
             <h1>Ensaios</h1>
             <div class="fotosEnsaios">
                 <div class="ens1">
-                    <img src="image.png" alt="ens1">
+                    <img src="image.png" alt="ens1" id="ens1">
                     <h3>Retratos Individuais</h3>
                 </div>
-                <div class="ens1">
-                    <img src="image (1).png" alt="ens2">
+                <div class="ens1" id="ens1">
+                    <img src="image (1).png" alt="ens2" id="ens1">
                     <h3>Sessão de Casal</h3>
                 </div>
-                <div class="ens1">
-                    <img src="image (2).png" alt="ens3">
+                <div class="break"></div>
+                <div class="ens1" id="ens1">
+                    <img src="image (2).png" alt="ens3" id="ens1">
                     <h3>Ensaios de Gestantes</h3>
                 </div>
-                <div class="ens1">
-                    <img id="familia" src="image (3).png" alt="ens4">
+                <div class="ens1" id="ens1">
+                    <img id="familia" src="image (3).png" alt="ens4" id="ens1">
                     <h3>Ensaios de Família</h3>
                 </div>
             </div>
@@ -156,9 +157,8 @@
                 <h2>Entre em contato ou solicite <br>um orçamento ao lado. Estamos <br>sempre dispostos a te atender <br>e retirar qualquer dúvida que possa surgir.</h2>
                 <img src="Robson Hilario.png" alt="icons">
             </div>
-            <div class="container">
+            <div class="container1">
                 <form action="https://api.staticforms.xyz/submit" method="post">
-                    <fieldset>
                         <input type="hidden" name="accessKey" value="d8209b24-8898-4698-8bd7-9e7fff0e6d24">
                         <div class="input-group">
                             <label for="nome">Nome:</label>
@@ -190,7 +190,6 @@
                         
 
                         <button type="submit" class="submit-button">Enviar Orçamento</button>
-                    </fieldset>
                 </form>
             </div>
         </section>
