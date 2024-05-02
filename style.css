@@ -31,17 +31,35 @@ header img {
 }
 
 .botoes a:hover {
-    text-decoration: underline;
-    
-}
+    color: rgb(253, 140, 48);}
 
 #orcamento {
     color: white;
-    background-color: black;
+    background-color: rgb(253, 140, 48);
     padding: 8px;
     padding-left: 15px;
     padding-right: 15px;
     border-radius: 50px;
+}
+
+#orcamento:hover{
+    background-color: #000000;
+    color: rgb(253, 140, 48);
+
+}
+
+#agendar {
+    color: white;
+    background-color: rgb(253, 140, 48);
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 50px;
+}
+
+#agendar:hover{
+    background-color: rgb(0, 0, 0);
+    color: rgb(253, 140, 48);
 }
 
 .inicio {
@@ -62,17 +80,22 @@ header img {
     justify-content: end;
 }
 
-#seta img{
-    width: 40px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50px;
-    border: 1px solid #000;
+#seta i {
+    width: 15px;
+    background-color: rgb(224, 224, 224);
+    border-radius: 100px;
+    border: 4px solid rgb(255, 102, 0);
     position: fixed;
     margin-top: 550px;
-    margin-right: 10px;
-    padding: 5px;
+    margin-right: 20px;
+    padding: 15px;
+    color: #000;
 }
 
+#seta i:hover{
+    background-color: #000;
+    color: coral;
+}
 .texto {
     margin-left: -800px;
     margin-top: -30px;
@@ -87,13 +110,13 @@ header img {
 .texto h4 {
     font-family: "Inter", sans-serif;
     color: white;
-    background-color: black;
+    background-color: rgb(253, 140, 48);
     margin-left: 115px;
     font-weight: 200;
-    padding-left: 4px;
     width: 125px;
     margin-top: -50px;
     font-size: 20px;
+    padding: 5px;
 }
 
 h5 {
@@ -114,6 +137,34 @@ h5 {
     object-fit: cover;
 }
 
+ 
+
+.marquee {
+    position: relative;
+    width: 200vw;
+    max-width: 100%;
+    height: 100px;
+    overflow-x: hidden;
+    margin-top: 70px;
+  }
+  
+.track {
+    font-family: none;
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 40s linear infinite;
+    font-size: 50px;
+    font-weight: bold;
+    color: #dddddd;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+
 .sobre {
     font-family: "Inter", sans-serif;
     margin-top: 50px;
@@ -128,7 +179,6 @@ h5 {
 }
 
 .box1 img {
-    filter: grayscale(100%) brightness(110%);
     width: 250px;
     padding: 20px;
 }
@@ -146,18 +196,6 @@ h5 {
     text-align: justify;
 }
 
-.ensaios {
-    margin-top: -30px;
-    margin-right: -10px;
-    font-family: "Inter", sans-serif;
-}
-
-.fotosEnsaios {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .box2 h1 {
     font-size: 30px;
     text-align: center;
@@ -166,8 +204,8 @@ h5 {
 }
 
 .fotosEnsaios img {
-    width: 300px;
-    height: 450px;
+    width: 800px;
+    height: 550px;
     object-fit: cover;
     padding: 10px;
 }
@@ -198,67 +236,186 @@ h5 {
 	flex-wrap: wrap;
   }
   
-  .relatos {
+.relatos {
+    font-family: Inter, sans-serif;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    font-family: "Inter", sans-serif;
+    margin-top: 100px;
 }
 
-  /* Card */
-  .card {
-	width: 300px;
-	height: 460px;
-	margin: 25px;
-	background-color: #fff;
-	border-radius: 20px;
-	overflow: hidden;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
-	transition: 0.3s;
-  }
-  
-  /* Card Header*/
-  .card-header {
-	width: 100%;
-	height: 300px;
-	overflow: hidden;
+
+
+.relatos span {
+    font-family: Inter, sans-serif;
+    padding: .3rem 3.2rem; 
+	background: #f57600;
+	color: rgb(255, 255, 255);
+	font-weight: 600;
+	display: inline-block;
+	text-transform: uppercase;
+	clip-path: polygon(100% 0, 93% 50%, 86% 99%, 0% 100%, 7% 47%, 13% 0%);
+}
+
+
+/* Card */
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+    margin-left: 100px;
+    white-space: nowrap; /* Impede que os itens do carrossel quebrem linha */
+    overflow-x: hidden;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+
+.carousel {
+    display: inline-flex; /* Exibe os itens em uma linha horizontal */
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: 0;
+}
+
+
+
+
+
+.carousel :where(.card, .img) {
     display: flex;
-    justify-content: center;
     align-items: center;
-  }
-  
-  .card-img {
-	width: 200px;
-    height: 200px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+.carousel::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+.carousel::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 10px;
+}
+.carousel::-webkit-scrollbar-track {
+background: transparent;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+
+}
+
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background-color: rgb(255, 102, 0);
+    border-radius: 8px;
+    display: flex;
+    cursor: pointer;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.carousel .card:hover{
+    background-color: #000;
+    color: #f57600;
+}
+
+.card .img {
+    background-color: #f57600;
+    width: 148px;
+    height: 148px;
+    border-radius: 50%;
+
+}
+
+.card .img img {
+    width: 140px;
+    height: 140px;
     object-fit: cover;
-  }
-  
-  /* Card Body */
-  .card-body {
-	height: 170px;
-	padding: 15px;
-	text-align: center;
-	font-family: sans-serif;
-  }
-  
-  .card-local {
-	font-size: 16px;
-	margin: 10px 0;
-  }
-  
-  
-  .card-texto {
-	font-size: 12px;
-	width: 250px;
-	margin: 0 auto;
-  }
-  
-  
-  /* Animação Hover */
-  .card:hover {
-	transform: scale3d(1.1, 1.1, 1);
-  }
-  
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+.card h3 {
+    font-family: Inter, sans-serif;
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 10px 0 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.card span {
+    font-family: Inter, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 1.31rem;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    column-gap: .6rem;
+    margin-top: 350px;
+    margin-left: -500px;
+}
+.social a .bx {
+	font-size: 30px;
+	color: rgb(0, 0, 0);
+	padding: 20px;
+	background: #f57600;
+    border-radius: 20px;
+}
+
+.social a .bx:hover {
+    background-color: #000;
+    color: #f57600;
+}
 
 .container {
     max-width: 1200px;
@@ -271,6 +428,11 @@ h5 {
     text-align: left;
     margin-top: 50px;
     margin-right: 150px;
+}
+
+.budget {
+    padding-top: 100px;
+    padding: 80px;
 }
 
 .budget-wrapper {
@@ -291,7 +453,7 @@ h5 {
 
 .budget-info img {
     width: 250px;
-    margin-top: 70%;
+    margin-top: 55%;
 }
 
 .budget form {
@@ -324,13 +486,13 @@ h5 {
     width: 350px; /* Define a largura dos campos de entrada como 100% */
     padding: 10px; /* Adiciona preenchimento interno aos campos */
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid rgb(253, 140, 48);
     box-sizing: border-box; /* Faz com que o padding não aumente a largura do campo */
 }
 
 .budget form button {
     padding: 10px; /* Adiciona preenchimento ao botão */
-    background-color: #b1b1b1;
+    background-color: rgb(253, 140, 48);
     color: white;
     border: none;
     border-radius: 10px;
@@ -340,7 +502,8 @@ h5 {
 }
 
 .budget form button:hover {
-    background-color: #919191;
+    background-color: rgb(0, 0, 0);
+    color: #ff8800;
 }
 
 .budget form textarea {
@@ -370,6 +533,69 @@ footer  {
 
 footer h4 {
     font-weight: 400;
+}
+
+.copyright{
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 30px;
+    height: 30px;
+    margin-top: -90px;
+}
+
+.copyright:hover{
+    color: #f57600;
+}
+
+
+.btn--action{
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    background-color: #ff7b00;
+    color: #000;
+    transition: all .5s ease 0s;
+    box-shadow: 0 10px #f57600;
+}
+
+.btn--action:hover{
+    box-shadow: inset 0 0 0 .25rem
+    #000000;
+    color: #f57600;
+    background-color: #000;
+}
+
+.btn--action span {
+    display: inline-block;
+    position: relative;
+    transition: all .5s ease;
+}
+
+.btn--action span::before{
+    color: #000;
+    font-size: 1rem;
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 1.5rem;
+    opacity: 0;
+    transition: all .1s ease 0s;
+}
+
+.btn--action:hover span{
+    padding-left: 1.5rem;
+}
+
+.btn--action:hover span::before{
+    left: 0;
+    opacity: 1;
+}
+
+.btn--action:active{
+    box-shadow: 0 5px #f0932b;
+    transform: translateY(5px);
 }
 
 
@@ -722,7 +948,7 @@ footer h4 {
     
     .budget form button {
         padding: 10px; /* Adiciona preenchimento ao botão */
-        background-color: #b1b1b1;
+        background-color: #ff9900;
         color: white;
         border: none;
         border-radius: 10px;
@@ -760,3 +986,219 @@ footer h4 {
         padding: 20px;
     }
 } 
+
+
+
+.test {
+    background: url("Design\ sem\ nome.png");
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+  .slideshow-container {
+    width: 500px;
+    position: relative;
+    margin: auto;
+  }
+
+  .slideshow-container h1 {
+    font-family: Inter, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #f57600;
+    clip-path: polygon(100% 0, 93% 50%, 86% 99%, 0% 100%, 7% 47%, 13% 0%);
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides img{
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(253, 140, 48);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    filter: opacity(50%);
+  }
+  
+  /* Caption text */
+  .text {
+    font-family: Inter, sans-serif;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255, 102, 0);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #ff7c12;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+  
+  .slideshow-container2 {
+    width: 500px;
+    position: relative;
+    margin: auto;
+    margin-top: 100px;
+  }
+
+
+  .slideshow-container2 h1 {
+    font-family: Inter, sans-serif;
+    text-align: center;
+    color: white;
+    background-color: #f57600;
+    clip-path: polygon(100% 0, 93% 50%, 86% 99%, 0% 100%, 7% 47%, 13% 0%);
+  }
+  
+  
+  /* Hide the images by default */
+  .mySlides2 {
+    display: none;
+  }
+
+  .mySlides2 img{
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+  }
+  
+  /* Next & previous buttons */
+  .prev2, .next2 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: rgb(253, 140, 48);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+  
+  /* Position the "next button" to the right */
+  .next2 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev2:hover, .next2:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    filter: opacity(50%);
+  }
+  
+  /* Caption text */
+  .text2 {
+    font-family: Inter, sans-serif;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(255, 102, 0);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext2 {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot2 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot2:hover {
+    background-color: #ff7c12;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+    

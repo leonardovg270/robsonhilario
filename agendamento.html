@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css">
+
+      
+
+</head>
+<body>
+    
+    <a href="index.html"><i class='bx bx-chevron-left-circle' id="botao"></i></a>
+
+    <h1>Agendamento</h1>
+
+    <div class="selecao">
+        <form action="" class="selecaoDataHorario">
+            <label for="data">Selecione a data:</label>
+            <input type="date" name="date" id="data">
+            <label for="horario" id="nm">Selecione o Horário:</label>
+            <input type="time" name="time" id="horario">
+        </form>
+    
+        <button type="submit"  id="agendar" onclick="agendar()">Agendar</button>
+
+    </div>
+    <div class="lista">
+        <h3 onclick="mostrarTexto()">Agendamentos Feitos   <i class='bx bx-chevron-down' id="baixo"></i></h3>
+        <ul id="resultadosLista" class="resultadosLista"></ul>
+    </div>
+
+
+
+    <script src="agendamento.js"></script>
+</body>
+</html>
